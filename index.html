@@ -1,109 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atendimento Virtual Geap</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Tahoma,sans-serif}
-body{background:#f5f7fb;color:#222}
-.hero{background:linear-gradient(135deg,#004aad,#ffffff 55%,#d62828);padding:100px 20px;text-align:center}
-.container{max-width:1200px;margin:auto}
-h1{font-size:64px;color:#004aad}
-.subtitle{font-size:22px;max-width:900px;margin:20px auto 35px}
-.btn{display:inline-block;padding:18px 34px;border-radius:14px;text-decoration:none;font-weight:700;margin:8px;transition:.3s}
-.primary{background:#004aad;color:#fff;animation:pulse 1.7s infinite}
-.secondary{background:#d62828;color:#fff;animation:pulse2 1.7s infinite}
-.btn:hover{transform:translateY(-3px)}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,74,173,.6)}70%{box-shadow:0 0 0 18px rgba(0,74,173,0)}100%{box-shadow:0 0 0 0 rgba(0,74,173,0)}}
-@keyframes pulse2{0%{box-shadow:0 0 0 0 rgba(214,40,40,.6)}70%{box-shadow:0 0 0 18px rgba(214,40,40,0)}100%{box-shadow:0 0 0 0 rgba(214,40,40,0)}}
-.section{padding:80px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
-.card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-.card h3{color:#004aad;margin-bottom:15px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.stat{background:#fff;padding:25px;border-radius:16px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.08)}
-.stat h2{color:#d62828}
-.cta{background:#004aad;color:#fff;text-align:center;padding:90px 20px}
-footer{background:#111;color:#fff;text-align:center;padding:30px}
-.faq-item{margin-bottom:20px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Oficial do Beneficiário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-white font-sans text-gray-800 scroll-smooth">
 
-<section class="hero">
-<div class="container">
-<h1>Atendimento Virtual Geap</h1>
-<p class="subtitle">Central digital para orientações administrativas, emissão de segunda via, antecipação de mensalidades e suporte financeiro.</p>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-plus-square text-xl"></i>
+                </div>
+                <span class="text-2xl font-black text-blue-900 tracking-tighter">Portal do Beneficiário</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+                <a href="#inicio" class="hover:text-blue-600 transition">Início</a>
+                <a href="#servicos" class="hover:text-blue-600 transition">Serviços</a>
+                <a href="#institucional" class="hover:text-blue-600 transition">Sobre Nós</a>
+                <a href="#contato" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-200">Área Logada</a>
+            </div>
+        </div>
+    </nav>
 
-<a class="btn primary" href="https://wa.me/55439996747200?text=Olá,%20preciso%20emitir%20a%202ª%20via%20do%20meu%20boleto." target="_blank">📄 EMITIR 2ª VIA AGORA</a>
-<a class="btn secondary" href="https://wa.me/55439996747200?text=Olá,%20preciso%20renegociar%20mensalidades." target="_blank">🤝 RENEGOCIAR AGORA</a>
+    <section id="inicio" class="relative bg-gradient-to-b from-blue-50 to-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        
+        <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">
+            Portal de Autoatendimento
+        </span>
+        
+        <h1 class="text-4xl md:text-5xl font-extrabold text-blue-950 mt-6 leading-tight">
+            O que você precisa <span class="text-blue-600">resolver agora?</span>
+        </h1>
+        <p class="text-lg text-gray-600 mt-4 mb-12 max-w-2xl mx-auto">
+            Escolha uma das opções abaixo para acessar seu documento ou falar com um consultor financeiro.
+        </p>
 
-<p style="margin-top:20px">Atendimento rápido • WhatsApp • Suporte online</p>
-</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            
+            <a href="https://wa.me/5543999674720" class="flex flex-col items-center p-8 bg-white border-2 border-blue-600 rounded-2xl shadow-lg hover:bg-blue-600 hover:text-white transition-all group">
+                <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 group-hover:bg-white transition">
+                    <i class="fa-solid fa-file-invoice text-3xl"></i>
+                </div>
+                <span class="text-xl font-bold uppercase tracking-tight">2ª Via de Boleto</span>
+                <p class="text-sm opacity-80 mt-2">Fatura do mês atual</p>
+            </a>
+
+            <a href="https://wa.me/5543999674720" class="flex flex-col items-center p-8 bg-white border-2 border-amber-500 rounded-2xl shadow-lg hover:bg-amber-500 hover:text-white transition-all group">
+                <div class="bg-amber-100 text-amber-600 p-4 rounded-full mb-4 group-hover:bg-white transition">
+                    <i class="fa-solid fa-clock-rotate-left text-3xl"></i>
+                </div>
+                <span class="text-xl font-bold uppercase tracking-tight">Boleto Vencido</span>
+                <p class="text-sm opacity-80 mt-2">Atualizar juros e multas</p>
+            </a>
+
+            <a href="https://wa.me/5543999674720" class="flex flex-col items-center p-8 bg-white border-2 border-red-600 rounded-2xl shadow-lg hover:bg-red-600 hover:text-white transition-all group">
+                <div class="bg-red-100 text-red-600 p-4 rounded-full mb-4 group-hover:bg-white transition">
+                    <i class="fa-solid fa-handshake-angle text-3xl"></i>
+                </div>
+                <span class="text-xl font-bold uppercase tracking-tight">Parcelas Atrasadas</span>
+                <p class="text-sm opacity-80 mt-2">Negociar dívidas</p>
+            </a>
+
+        </div>
+
+        <div class="mt-12">
+            <a href="https://wa.me/5543999674720" target="_blank" class="inline-flex items-center gap-3 bg-green-500 text-white px-10 py-4 rounded-full font-black text-lg hover:bg-green-600 transition shadow-xl hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                SOLICITAR VIA WHATSAPP
+            </a>
+            <p class="text-gray-400 text-sm mt-4">Atendimento rápido: (11) 98768‑6022</p>
+        </div>
+
+    </div>
 </section>
 
-<section class="section">
-<div class="container">
-<h2 style="text-align:center;margin-bottom:35px">Serviços Disponíveis</h2>
-<div class="grid">
-<div class="card">
-<h3>📄 Segunda Via de Boleto</h3>
-<p>Solicite a emissão atualizada do seu boleto de forma rápida e prática.</p>
-</div>
-<div class="card">
-<h3>⚡ Antecipação de Mensalidades</h3>
-<p>Receba orientações sobre antecipação de pagamentos e organização financeira.</p>
-</div>
-<div class="card">
-<h3>🤝 Negociação Financeira</h3>
-<p>Suporte para regularização e alternativas de negociação.</p>
-</div>
-</div>
-</div>
-</section>
+    <section id="institucional" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-blue-950 mb-6">Compromisso com o seu bem-estar</h2>
+                <p class="text-gray-600 leading-relaxed mb-10 text-lg">
+                    Há mais de 20 anos,</strong> oferecemos soluções completas em assistência médica. 
+                    Nossa missão é garantir que você tenha acesso ao melhor atendimento quando mais precisar, 
+                    aliando tecnologia e humanização.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <p class="text-3xl font-black text-blue-600">50k+</p>
+                        <p class="text-sm text-gray-500 uppercase font-bold tracking-tighter">Vidas Cuidadas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-600">200+</p>
+                        <p class="text-sm text-gray-500 uppercase font-bold tracking-tighter">Hospitais</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-600">24h</p>
+                        <p class="text-sm text-gray-500 uppercase font-bold tracking-tighter">Atendimento</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-600">Nota A</p>
+                        <p class="text-sm text-gray-500 uppercase font-bold tracking-tighter">Avaliação ANS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section" style="background:#eef3ff">
-<div class="container">
-<h2 style="text-align:center;margin-bottom:35px">Por que utilizar nosso atendimento?</h2>
-<div class="grid">
-<div class="card">✅ Atendimento digital simplificado</div>
-<div class="card">✅ Comunicação rápida via WhatsApp</div>
-<div class="card">✅ Processo intuitivo e seguro</div>
-<div class="card">✅ Compatível com celular e computador</div>
-</div>
-</div>
-</section>
+    <footer id="contato" class="bg-blue-950 text-white py-16">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 border-b border-blue-900 pb-12">
+            
+            <div>
+                <h4 class="text-xl font-bold mb-6">Atendimento</h4>
+                <a href="https://wa.me/5543999674720" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 px-6 py-2 rounded-full font-bold transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Suporte por WhatsApp
+                </a>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Links Úteis</h4>
+                <ul class="text-blue-200 text-sm space-y-3">
+                    <li><a href="https://wa.me/5543999674720" class="hover:text-white transition">Rede Credenciada</a></li>
+                    <li><a href="https://wa.me/5543999674720" class="hover:text-white transition">Portal da Transparência</a></li>
+                    <li><a href="https://wa.me/5543999674720" class="hover:text-white transition">Trabalhe Conosco</a></li>
+                    <li><a href="https://wa.me/5543999674720" class="hover:text-white transition">Privacidade (LGPD)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-8 flex flex-col md:flex-row justify-between items-center text-xs text-blue-400 gap-4">
+            <p>© 2026 Operadora de Saúde. </p>
+            <div class="flex gap-6">
+                <i class="fa-brands fa-facebook text-xl hover:text-white cursor-pointer"></i>
+                <i class="fa-brands fa-instagram text-xl hover:text-white cursor-pointer"></i>
+                <i class="fa-brands fa-linkedin text-xl hover:text-white cursor-pointer"></i>
+            </div>
+        </div>
+    </footer>
 
-<section class="section">
-<div class="container">
-<h2 style="text-align:center;margin-bottom:35px">Perguntas Frequentes</h2>
-<div class="card">
-<div class="faq-item"><strong>Como solicitar a segunda via?</strong><br>Clique em “Emitir 2ª Via Agora” e fale com nossa equipe.</div>
-<div class="faq-item"><strong>Posso consultar mensalidades?</strong><br>Sim, nossa equipe poderá orientar sobre procedimentos administrativos.</div>
-<div class="faq-item"><strong>O atendimento é online?</strong><br>Sim, por canais digitais.</div>
-</div>
-</div>
-</section>
+    <script>
+        function maskCPF(i) {
+            let v = i.value;
+            if (isNaN(v[v.length - 1])) {
+                i.value = v.substring(0, v.length - 1);
+                return;
+            }
+            i.setAttribute("maxlength", "14");
+            if (v.length == 3 || v.length == 7) i.value += ".";
+            if (v.length == 11) i.value += "-";
+        }
+    </script>
+	
+	
+	<a href="https://wa.me/5543999674720?text=Olá! Preciso de ajuda com a segunda via do meu boleto." 
+   target="_blank" 
+   style="position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s ease;"
+   onmouseover="this.style.transform='scale(1.1)'"
+   onmouseout="this.style.transform='scale(1)'">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-<section class="section">
-<div class="container">
-<div class="stats">
-<div class="stat"><h2>24h</h2><p>Canais digitais</p></div>
-<div class="stat"><h2>100%</h2><p>Online</p></div>
-<div class="stat"><h2>WhatsApp</h2><p>Atendimento rápido</p></div>
-<div class="stat"><h2>Suporte</h2><p>Administrativo</p></div>
+<div style="position: fixed; bottom: 50px; right: 110px; background: #fff; padding: 8px 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 14px; font-weight: bold; color: #333; z-index: 9998; border: 1px solid #eee;">
+    Precisa de ajuda?
 </div>
-</div>
-</section>
-
-<section class="cta">
-<h2>📄 Precisa emitir sua segunda via?</h2>
-<p>Inicie seu atendimento agora mesmo.</p><br>
-<a class="btn secondary" href="https://wa.me/55439996747200?text=Olá,%20preciso%20emitir%20a%202ª%20via%20do%20meu%20boleto." target="_blank">EMITIR 2ª VIA AGORA</a>
-</section>
-
-<footer>© 2026 Atendimento Virtual Geap</footer>
-
 </body>
 </html>
